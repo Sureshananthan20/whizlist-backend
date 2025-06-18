@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.example.taskManager.Entity.*;
 @Repository
 public interface userRepo extends JpaRepository<user, Integer>{
-	@Query("SELECT id FROM user  WHERE username= ?1 AND password = ?2")
+	@Query("SELECT id FROM user  WHERE username= ?2 AND password = ?1")
 	int findByNameAndPass(String name,String pass);
 }
